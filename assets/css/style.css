@@ -1,0 +1,136 @@
+#body {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#menu {
+    padding-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#menu #drop {
+    padding-left: 12px;
+}
+
+#menu #drop .dark-mode {
+    position: relative;
+    display: none;
+}
+
+#menu #drop .light-mode {
+    position: relative;
+}
+
+#menu #switch {
+    opacity: 80%;
+}
+
+#menu #switch .dark-mode {
+    position: relative;
+    display: none;
+}
+
+#menu #switch .light-mode {
+    position: relative;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#header #title {
+    padding-left: 100px;
+}
+
+#header #title .dark-mode {
+    display: none;
+}
+
+#header #stick {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#header #stick .dark-mode {
+    display: none;
+}
+
+#header #text {
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
+}
+
+#buttons {
+    align-self: flex-end;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+#drop-content {
+    display: none;
+    position: absolute;
+    background-color: #332B2B;
+    right: 10px;
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#drop-content a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+#drop:hover #drop-content {
+    display: block;
+    opacity: 0%;
+    animation-name: dropDown;
+    animation-duration: 0.25s;
+    opacity: 100%;
+}
+
+@keyframes switchOpacity {
+    from {
+        opacity: 80%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+#switch:hover {
+    animation-name: switchOpacity;
+    animation-duration: 1s;
+    opacity: 100%;
+}
